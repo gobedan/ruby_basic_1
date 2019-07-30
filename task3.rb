@@ -5,16 +5,22 @@
 # leg - katet
 # hypotenuse - gipotenuza 
 print "Enter length of side a: "
-a = Integer(gets.chomp).abs
+side_a = gets.to_i.abs
+
 print "Enter length of side b: "
-b = Integer(gets.chomp).abs
+side_b = gets.to_i.abs
+
 print "Enter length of side c: "
-c = Integer(gets.chomp).abs
+side_c = gets.to_i.abs
+
 right = false
 isosceles = false
 equilateral = false 
- 
 
+# a - hypotenuse 
+a, b, c = [side_a, side_b, side_c].sort{ |a, b| b <=> a }
+
+=begin
 if (b >= a) && (b >= c)
 #  hypotenuse = b 
   right = true if b**2 == a**2 + c**2 
@@ -26,7 +32,9 @@ else
 #  hypotenuse = a 
   right = true if a**2 == b**2 + c**2 
 end 
+=end
 
+right = true if a**2 == b**2 + c**2 
 if (a == b) || (b == c) || (a == c)
     isosceles = true
     if (a == b) && (b == c) && (a == c)
@@ -38,4 +46,3 @@ end
 puts "Right: #{right}"
 puts "Equilateral: #{equilateral}"
 puts "Isosceles: #{isosceles}"
-

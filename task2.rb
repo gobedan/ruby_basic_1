@@ -1,6 +1,6 @@
 # Triangle square 
 print "Triangle base? "
-base = Integer(gets.chomp).abs
+base = gets.to_i.abs
 print "Triangle height? "
-height = Integer(gets.chomp).abs
-puts "Square of triangle (base:#{base}; height:#{height}) = #{(base*height)/2}" 
+height = gets.to_i.abs
+puts "Square of triangle (base: #{ base }; height: #{ height }) = #{ (base * height) / 2 }" 
