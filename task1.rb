@@ -7,4 +7,4 @@ if (height - 110) > 0
 	puts "Your ideal bodyweight is: #{ height - 110 }"
 else
 	puts "Your weigth is optimal already!"
-end 
+end
